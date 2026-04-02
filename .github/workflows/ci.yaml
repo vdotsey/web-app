@@ -35,7 +35,7 @@ jobs:
       - name: Trivy image scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ${{ env.IMAGE_NAME}}:latest
+          image-ref: webapp:latest
           format: 'table'
           severity: 'CRITICAL,HIGH'
           exitcode: 1
