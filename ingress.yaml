@@ -7,8 +7,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-north-1:711387141889:certificate/REPLACE_ME
-spec:
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-north-1:711387141889:certificate/9651a089-2259-485a-884b-41f7e3f90c3e
   ingressClassName: alb
   rules:
     - host: viviennedofit.com
