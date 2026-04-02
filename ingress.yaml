@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-north-1:711387141889:certificate/9651a089-2259-485a-884b-41f7e3f90c3e
   ingressClassName: alb
   rules:
-    - host: viviennedofit.com
+    - host: app.viviennedofit.com
       http:
         paths:
           - path: /
@@ -20,4 +20,3 @@ metadata:
                 name: app-service
                 port:
                   number: 80
-                  
