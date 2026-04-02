@@ -14,7 +14,7 @@ spec:
   spec:
      containers:
      - name: app-name
-       image: lovelord88/honey-app #lovelord88/webapp:latest
+       image: lovelord88/webapp:latest
        ports:
        - containerPort: 3000
  
