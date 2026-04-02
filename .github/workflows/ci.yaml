@@ -54,6 +54,10 @@ jobs:
           aws eks update-kubeconfig \
           --name eks-project-dev-eks-cluster \
           --region eu-north-1
+
+      - name: Test cluster access
+        run: |
+         kubectl get nodes
         
       - name: Deploy to EKS
         run: |
