@@ -1,0 +1,26 @@
+apiVersion:
+kind: HorinzontalPodAutoScaler
+metadata:
+  name:
+spec:
+ scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: app-name
+ minReplicas: 1
+ maxReplicas: 3
+ metrics:
+  - type: Resource
+    resource:
+     name: cpu
+     target: 
+       type: Utilization
+       averageUtilization: 50
+  - type: pod
+    pods:
+      metrics:
+       name: requests-per-second
+       target:
+         type: AverageValue
+         averageValue: 1k
+
